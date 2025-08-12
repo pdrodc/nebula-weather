@@ -1,0 +1,106 @@
+.Hero {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.Hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.heroTitle {
+  font-size: 5rem;
+  font-weight: 200;
+  color: var(--white);
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 50px;
+  border: 1px solid #c4c4c469;
+  margin-inline: auto;
+  padding: 20px 25px;
+  gap: 8px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 450px;
+  transition: background 0.3s ease;
+  margin-bottom: 2rem;
+  font-family: 'Zen Dots', sans-serif;
+}
+
+.searchBar:hover {
+  background: rgba(255, 255, 255, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.searchBar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  flex: 1;
+  color: #fff;
+  font-size: 14px;
+}
+
+.searchBar input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+}
+
+.searchBar button {
+  background: #4e7bff;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.searchBar button span {
+  font-size: 25px;
+}
+
+.searchBar button:hover {
+  background: #3a62cc;
+}
+
+.weather {
+  margin-top: 50px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: var(--white);
+  border-radius: 25px;
+  width: 250px;
+  gap: 10px;
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+  .searchBar {
+    width: 300px;
+  }
+}

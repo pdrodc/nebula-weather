@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Header {
+  background-size: cover;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  z-index: 999;
+}
+
+.wrapperHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--color-text);
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+}
+
+.Logo img {
+  width: 50px;
+  height: 50px;
+} 
+
+.ulMenu {
+  display: flex;
+  gap: 32px;
+}
+
+.navLi a {
+  color: var(--color-text);
+}
+
+.navLi a:hover {
+  color: var(--hover-text);
+  transition: all 0.3s ease-in-out;
+  filter: drop-shadow(10px 10px 80px var(--color-text));
+}
+
+#buttonMobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  #buttonMobile {
+    display: flex;
+    background: transparent;
+    align-items: flex-end;
+    border: none;
+  }
+  #menuIcons {
+    width: 20px;
+    height: 20px;
+  }
+  .active nav {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 3;
+  }
+  .active .ulMenu {
+    display: flex;
+    padding: 16px 20px;
+    gap: 32px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .active .navLi {
+    text-align: center;
+  }
+}

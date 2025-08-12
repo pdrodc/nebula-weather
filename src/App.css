@@ -1,0 +1,25 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --blue: #0000ff;
+    --gray: #808080;
+    --background: #020617;
+    --color-text: #678AB1;
+    --hover-text: #93c5fd;
+    --nebula: #4e7bff;
+    --header: #A4A4A4;
+}
+
+body {
+  font-family: "Quantico", sans-serif;
+  overflow-x: hidden;
+  background-color: var(--background);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

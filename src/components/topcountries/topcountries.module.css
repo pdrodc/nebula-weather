@@ -1,0 +1,93 @@
+.worldWeatherSection {
+  display: grid;
+  grid-template-rows: auto 0fr auto;
+  background-color: var(--header);
+  padding: 20px;
+  height: 50vh;
+}
+
+.worldWeatherTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--color-text);
+}
+
+.worldWeather {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.cityCard {
+  background: rgba(255, 255, 255, 0.1);
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  color: white;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cityCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.flagContainer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.countryFlag {
+  width: 30px;
+  height: 20px;
+  border-radius: 3px; 
+}
+
+.cityCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cityCard h3 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.cityCard p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.weatherIcon {
+  width: 60px;
+  height: 60px;
+}
+
+.cityCard span {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .worldWeatherTitle {
+    font-size: 2rem;
+  }
+  .worldWeatherSection {
+    height: auto;
+  }
+  .cityCard h3 {
+    font-size: 1rem;
+  }
+  .worldWeather {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
