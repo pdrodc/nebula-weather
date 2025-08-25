@@ -4,7 +4,7 @@
     align-items: center;
     border-top: 1px solid var(--graybg);
     background-color: var(--color-text);
-    height: 15vh;
+    height: 25vh;
 }
 
 .logo {
